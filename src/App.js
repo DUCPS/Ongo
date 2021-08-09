@@ -10,6 +10,7 @@ import {
 
 import Home from "./pages/home.js"
 import Contact from "./pages/contact.js"
+import Art from "./pages/art.js"
 
 
 class App extends React.Component {
@@ -32,10 +33,6 @@ function ModalSwitch() {
             <Route path="/contact" children={<Contact />} />
         </Switch>
     );
-}
-  
-function Art() {
-    return <h2>Users</h2>;
 }
 
 export default App;

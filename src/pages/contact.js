@@ -5,9 +5,9 @@ import {
     Link,
   } from "react-router-dom";
 
-  function Contact() {
+function Contact() {
     return (
-        <div class="container flex object-none justify-center bg-red-200">
+        <div class="container flex object-none justify-center">
             <div class="flex-auto" className="contact-page">
                 <div class="flex flex-row justify-between">
                     <nav>
@@ -27,7 +27,7 @@ import {
                     </p>
                 </div>
                 <div class="md:flex md:flex-row-reverse md:justify-between">
-                    <div class="flex p-3 bg-green-300 relative justify-evenly hover-trigger">
+                    <div class="flex p-3 bg-gray-400 relative justify-evenly hover-trigger">
                         <video class="mx-auto" className='videoTag' autoPlay loop muted>
                             <source src={wink} type='video/mp4' />
                         </video>
@@ -37,10 +37,12 @@ import {
                             <p class="text-5xl">MASSIVE EGO</p>
                         </div>
                     </div>
-                    <div class="text-center md:mx-auto md:text-right text-2xl text-white">
-                        <p class="py-4 pr-3">isaac@brocklesby.me.uk</p>
-                        <p class="py-4 pr-3">@isaacbrocklesby</p>
-                        <p class="py-4 pr-3">CV</p>
+                    <div class="text-center md:mx-auto md:text-center text-2xl font-mono">
+                        <p class="pr-3 pt-3 text-gray-500">isaac@brocklesby.me.uk</p>
+                        <p class="py-4 pr-3 text-gray-500">@isaacbrocklesby</p>
+                        <a class="py-4 pr-3 hover:text-black text-gray-500" href="cv_v2.pdf" download="cv.pdf">
+                            Download CV
+                        </a>
                     </div>
                 </div>
             </div>
@@ -48,4 +50,4 @@ import {
     )
 }
 
-  export default Contact;
+export default Contact;
