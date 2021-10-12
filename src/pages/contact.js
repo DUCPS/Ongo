@@ -5,7 +5,7 @@ import {
     Link,
   } from "react-router-dom";
 
-function Contact() {
+const Contact = () => {
     return (
         <div class="container flex object-none justify-center">
             <div class="flex-auto" className="contact-page">
@@ -40,9 +40,11 @@ function Contact() {
                     <div class="text-center md:mx-auto md:text-center text-2xl font-mono">
                         <p class="pr-3 pt-3 text-gray-500">isaac@brocklesby.me.uk</p>
                         <p class="py-4 pr-3 text-gray-500">@isaacbrocklesby</p>
-                        <a class="py-4 pr-3 hover:text-black text-gray-500" href="cv_v2.pdf" download="cv.pdf">
+                        <a class="py-4 pr-3 hover:text-black text-gray-500" href="cv_v3.pdf" download="cv.pdf">
                             Download CV
                         </a>
+                        <p class="py-4 pr-3 text-gray-500">DISCLAIMER:</p>
+                        <p class="py-4 pr-3 text-gray-500">the mullet and middle parting are no more:(</p>
                     </div>
                 </div>
             </div>
