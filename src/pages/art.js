@@ -1,13 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
 import {
     Link,
   } from "react-router-dom";
 
-function Art() {
+const Art = () => {
+
+    const [count, setCount] = useState(0);
+
     return(
         <div class="">
-            <div class="sticky top-0 flex flex-row justify-evenly"> 
+            <div class="sticky top-0 flex flex-row justify-evenly">
                 <div>
                     <Link to="/" class="text-2xl hover:text-black text-gray-500 font-mono">
                         home
@@ -19,7 +22,12 @@ function Art() {
                     </Link>
                 </div>
             </div>
-            <div class="text-9xl text-center">Coming soon!!!!</div>
+            <div class="sticky top-0 flex flex-row justify-evenly text-2xl font-mono">
+                <p>You clicked {count} times</p>
+                <button onClick={() => setCount(count + 1)}>
+                    Click me
+                </button>
+            </div>
         </div>
     )
 }
