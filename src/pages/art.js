@@ -1,26 +1,24 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import '../App.css';
-import {
-    Link,
-  } from "react-router-dom";
+import LinkFun from '../components/links.js';
+import GetArt from '../components/getArt';
 
-function Art() {
+const Art = () => {
+
+    const images = GetArt()
+
     return(
-        <div class="">
-            <div class="sticky top-0 flex flex-row justify-evenly"> 
-                <div>
-                    <Link to="/" class="text-2xl hover:text-black text-gray-500 font-mono">
-                        home
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/contact" class="text-2xl hover:text-black text-gray-500 font-mono">
-                        contact
-                    </Link>
+        <main class="flex flex-col h-screen">
+            <LinkFun secondLink = "contact"></LinkFun>
+            <div class="flex-auto overflow-y-auto p-5 w-screen">
+                <div class="space-y-4 m-auto w-80">
+                    <p class="text-5xl font-mono text-center">A     R     T</p>
+                    {images.map((i) => (
+                        <img src={i.src}/>
+                    ))}
                 </div>
             </div>
-            <div class="text-9xl text-center">Coming soon!!!!</div>
-        </div>
+        </main>
     )
 }
 

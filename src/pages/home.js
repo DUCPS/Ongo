@@ -5,7 +5,7 @@ import {
     Link,
   } from "react-router-dom";
 
-function Home() {
+const Home = () => {
     return (
         <div class="flex items-center" className="welcome-page">
             <div class="md:flex md:items-center text-center">
