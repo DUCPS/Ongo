@@ -1,34 +1,22 @@
 import React, { useState, useEffect } from 'react';
 import '../App.css';
-import {
-    Link,
-  } from "react-router-dom";
+import LinkFun from '../components/links.js';
+import kingRat from '../media/art_folder/245056479_270857714915619_7617761666921114920_n.jpg';
+import mushMan from '../media/art_folder/245056190_4432428546871770_361691049488237531_n.jpg';
 
 const Art = () => {
 
-    const [count, setCount] = useState(0);
-
     return(
-        <div class="">
-            <div class="sticky top-0 flex flex-row justify-evenly">
-                <div>
-                    <Link to="/" class="text-2xl hover:text-black text-gray-500 font-mono">
-                        home
-                    </Link>
-                </div>
-                <div>
-                    <Link to="/contact" class="text-2xl hover:text-black text-gray-500 font-mono">
-                        contact
-                    </Link>
+        <main class="flex flex-col h-screen">
+            <LinkFun secondLink = "contact"></LinkFun>
+            <div class="flex-auto overflow-y-auto p-5 w-screen">
+                <div class="space-y-4 m-auto w-80">
+                    <p class="text-5xl font-mono text-center">A     R     T</p>
+                    <img src={kingRat} />
+                    <img src={mushMan} />
                 </div>
             </div>
-            <div class="sticky top-0 flex flex-row justify-evenly text-2xl font-mono">
-                <p>You clicked {count} times</p>
-                <button onClick={() => setCount(count + 1)}>
-                    Click me
-                </button>
-            </div>
-        </div>
+        </main>
     )
 }
 
